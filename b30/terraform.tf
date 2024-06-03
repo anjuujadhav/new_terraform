@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "cbz-online-terraform"
+    bucket = "anjaliterraform"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
@@ -13,7 +13,7 @@ terraform {
 resource "aws_security_group" "allow_tls" {
   name        = "allow_tls"
   description = "Allow SSH for all network"
-  vpc_id      = "vpc-006b120a1f8897bc9" # VPC ID should be a string
+  vpc_id      = "vpc-0e3f914a30b59bed7" # VPC ID should be a string
 
   ingress {
     description = "SSH rule"
