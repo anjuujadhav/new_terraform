@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"  # Change this to your desired region
+  region = "us-east-1"  # Change this to your desired region
 }
 
 resource "aws_vpc" "main_vpc" {
@@ -12,7 +12,7 @@ resource "aws_vpc" "main_vpc" {
 resource "aws_subnet" "public_subnet" {
   vpc_id            = aws_vpc.main_vpc.id
   cidr_block        = "10.0.1.0/24"
-  availability_zone = "us-west-2a"  # Change this to your desired AZ
+  availability_zone = "us-east-1a"  # Change this to your desired AZ
   tags = {
     Name = "public-subnet"
   }
